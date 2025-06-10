@@ -5,9 +5,8 @@ import { loadMore } from '../main.js';
 const refs = {
   gallery: document.querySelector('.gallery'),
   loader: document.querySelector('.loader'),
-  // btnLoadMore: document.querySelector('.btnLoadMore'),
 };
-const { gallery, loader /*, btnLoadMore*/ } = refs;
+const { gallery, loader } = refs;
 
 const lightbox = new SimpleLightbox('.gallery a', {
   overlay: true,

@@ -43,7 +43,7 @@ async function onFormSubmit(event) {
   const { data } = await getImagesByQuery(searchQuery, page);
   try {
     if (!data.hits.length) {
-      OnAxiosError();
+      onAxiosError();
       return;
     }
     createGallery(data.hits);
@@ -104,7 +104,7 @@ async function onBtnLoadMore(event) {
 }
 btnLoadMore.addEventListener('click', onBtnLoadMore);
 
-function OnAxiosError() {
+function onAxiosError() {
   iziToast.error({
     message:
       `Sorry, there are no images matching ` +
